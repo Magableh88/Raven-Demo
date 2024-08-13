@@ -1,0 +1,74 @@
+<!--==============================================================================
+  Project:        Raven Watches E-Store
+  File:           order.html
+  Description:    This is order page where the customer can fill out an order form to buy from the 
+                  four watches offered at raven. 
+  Author:         Mohammad Makableh
+  
+==============================================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch Selection Form</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <img th:src="@{/images/raven.png}" alt="Raven Logo" class="logo">
+        <nav id="nav-menu">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/services}">Services</a>
+            <a th:href="@{/order}">Order</a>
+            <a th:href="@{/about}">About Us</a>
+            <a href="https://www.instagram.com/raven.watches/" target="_blank">Instagram Page</a>
+        </nav>
+    </header>
+    <div class="form-container">
+        <h1>Watch Selection Form</h1>
+        <form id="watchForm" action="/submitOrder" method="post">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+            </div>
+
+            <div class="checkbox-group">
+                <label>Select Your Watch:</label>
+                <label><input type="checkbox" name="watches" value="Watch 1" data-price="100"> Watch 1 ($100)</label>
+                <label><input type="checkbox" name="watches" value="Watch 2" data-price="200"> Watch 2 ($200)</label>
+                <label><input type="checkbox" name="watches" value="Watch 3" data-price="300"> Watch 3 ($300)</label>
+                <label><input type="checkbox" name="watches" value="Watch 4" data-price="400"> Watch 4 ($400)</label>
+            </div>
+
+            <div class="form-group">
+                <label>Total Price:</label>
+                <div id="totalPrice">$0</div>
+                <input type="hidden" id="totalPriceInput" name="totalPrice" value="0">
+            </div>
+
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+
+    <script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>

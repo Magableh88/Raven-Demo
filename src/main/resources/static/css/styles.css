@@ -1,0 +1,339 @@
+/*==============================================================================
+  Project:        Raven Watches E-Store
+  File:           styles.css
+  Description:    This file contains the main styles for the website, including
+                  global styles, layout settings, and component styles.
+  Author:         Mohammad Makableh
+  Version:        1.0.0
+  Last Modified:  2024-08-10
+==============================================================================*/
+
+/*------------------------------------------------------------------------------
+  1. General Styles
+------------------------------------------------------------------------------*/
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #FFF;
+    overflow-x: hidden;
+    overflow: hidden;
+}
+
+header {
+    position: relative;
+    text-align: center;
+    background-color: #000;
+    padding: 20px;
+}
+
+header .logo {
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+/*------------------------------------------------------------------------------
+  2. Navigation Menu Styles
+------------------------------------------------------------------------------*/
+nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background-color: #FFD700;
+    padding: 10px 0;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+nav a {
+    color: #000;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+nav a:hover {
+    background-color: #000;
+    color: #FFD700;
+}
+
+/* Show Navigation Menu on Hamburger Click */
+nav.show {
+    display: flex;
+}
+
+/*------------------------------------------------------------------------------
+  3. Hamburger Menu Styles
+------------------------------------------------------------------------------*/
+.hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1000;
+}
+
+.hamburger-menu .bar {
+    width: 100%;
+    height: 4px;
+    background-color: #FFD700;
+}
+
+/*------------------------------------------------------------------------------
+  4. Home Page Styles
+------------------------------------------------------------------------------*/
+.home-page .background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Ensure the video stays in the background */
+}
+
+.home-page .background-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover; /* Ensures the video covers the entire area */
+}
+
+.home-page .center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.home-page .small-text {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.home-page .large-text {
+    font-size: 48px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.home-page .smallest-text {
+    font-size: 16px;
+}
+
+/*------------------------------------------------------------------------------
+  5. Services Page Styles
+------------------------------------------------------------------------------*/
+.services-background {
+    position: relative;
+    text-align: center;
+    background-color: #000;
+    padding: 50px;
+    background-image: url('raven.png');
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.service-text {
+    font-size: 36px;
+    color: #FFFFFF;
+    margin: 20px 0;
+}
+
+.service-title {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+/*------------------------------------------------------------------------------
+  6. Gallery Styles (Shared across multiple pages)
+------------------------------------------------------------------------------*/
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.gallery a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.gallery img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 2px solid #FFD700;
+    margin-bottom: 10px;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.gallery a:hover img {
+    opacity: 0.5;
+    transform: scale(1.1);
+}
+
+.gallery a .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(37, 57, 81, 0.582);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery a:hover .overlay {
+    opacity: 1;
+}
+
+.desc {
+    margin-top: 5px;
+    color: #FFD700;
+    font-size: 14px;
+    text-align: center;
+}
+
+/*------------------------------------------------------------------------------
+  7. About Page Styles
+------------------------------------------------------------------------------*/
+.about-background {
+    position: relative;
+    background-image: url('raven.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px;
+    text-align: center;
+}
+
+.about-background h1 {
+    font-size: 36px;
+}
+
+.about-background p {
+    font-size: 20px;
+}
+
+/*------------------------------------------------------------------------------
+  8. Collection Page Styles
+------------------------------------------------------------------------------*/
+.collection-background {
+    background-color: #000;
+    padding: 50px;
+    text-align: center;
+    color: #FFF;
+}
+
+.collection-background h1,
+.collection-background h2 {
+    margin: 20px 0;
+}
+
+.collection-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    overflow-y: auto;
+    max-height: 80vh;
+    padding-bottom: 20px;
+}
+
+.collection-gallery img {
+    width: 200px;
+    height: auto;
+    border: 2px solid #FFD700;
+}
+
+/*------------------------------------------------------------------------------
+  9. Order Form Styles
+------------------------------------------------------------------------------*/
+.order-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #222;
+    border: 2px solid #FFD700;
+    border-radius: 10px;
+}
+
+.order-container h1 {
+    text-align: center;
+    color: #FFD700;
+    margin-bottom: 30px;
+}
+
+.order-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #FFD700;
+}
+
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #FFD700;
+    background-color: #333;
+    color: #FFF;
+}
+
+.checkbox-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-group label {
+    display: block;
+    margin-bottom: 10px;
+    color: #FFF;
+}
+
+input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #FFD700;
+    color: #000;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background-color: #FFF;
+    color: #000;
+}

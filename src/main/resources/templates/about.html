@@ -1,0 +1,44 @@
+<!--==============================================================================
+  Project:        Raven Watches E-Store
+  File:           about.html
+  Description:    This the page that displays a brief overview of the company's 
+                  mission and goals.
+  Author:         Mohammad Makableh
+  
+==============================================================================-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Raven Watches</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <img th:src="@{/images/raven.png}" alt="Raven Logo" class="logo">
+        <nav id="nav-menu">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/services}">Services</a>
+            <a th:href="@{/order}">Order</a>
+            <a th:href="@{/about}">About Us</a>
+            <a href="https://www.instagram.com/raven.watches/" target="_blank">Instagram Page</a>
+        </nav>
+    </header>
+    <main>
+        <div class="about-background">
+            <div class="center-text">
+                <h1>About Us</h1>
+                <p>Raven Watches, founded by Nihad Hamdi, is committed to delivering exceptional timepieces that marry classic elegance with modern sophistication. Our partnerships with renowned businesses ensure the highest quality materials and craftsmanship in every watch we create. At Raven Watches, we believe in the art of keeping time with precision and style, providing our customers with luxury and reliability they can count on.</p>
+            </div>
+        </div>
+    </main>
+    <script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>

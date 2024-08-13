@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tufina Collection - Raven Watches</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"">
+</head>
+<body>
+    <header>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <img th:src="@{/images/raven.png}" alt="Raven Logo" class="logo">
+        <nav id="nav-menu">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/services}">Services</a>
+            <a th:href="@{/order}">Order</a>
+            <a th:href="@{/about}">About Us</a>
+            <a href="https://www.instagram.com/raven.watches/" target="_blank">Instagram Page</a>
+        </nav>
+    </header>
+    <main>
+        <div class="collection-background">
+            <div class="center-text">
+                <h1>Our Watches</h1>
+                <h2>Tufina</h2>
+            </div>
+            <div class="gallery">
+                <img src="tufina1.jpeg" alt="Tufina Watch 1">
+                <img src="tufina2.jpeg" alt="Tufina Watch 2">
+            </div>
+        </div>
+    </main>
+    <script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>

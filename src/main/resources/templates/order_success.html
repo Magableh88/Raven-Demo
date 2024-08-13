@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Success</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Order Submitted Successfully!</h1>
+        <p>Thank you for your order. Here are the details:</p>
+        <ul>
+            <li><strong>Name:</strong> <span th:text="${order.name}"></span></li>
+            <li><strong>Age:</strong> <span th:text="${order.age}"></span></li>
+            <li><strong>Address:</strong> <span th:text="${order.address}"></span></li>
+            <li><strong>Watches:</strong> <span th:text="${order.watches}"></span></li>
+            <li><strong>Total Price:</strong> $<span th:text="${order.totalPrice}"></span></li>
+            <li><strong>Order Date:</strong> <span th:text="${order.orderDate}"></span></li>
+        </ul>
+    </div>
+</body>
+</html>

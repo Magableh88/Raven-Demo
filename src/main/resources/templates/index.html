@@ -1,0 +1,53 @@
+<!--==============================================================================
+  Project:        Raven Watches E-Store
+  File:           index.html
+  Description:    This is the main landing page for the Raven Watches E-Store.
+                  It contains the navigation menu, company logo, and links to
+                  the various sections of the website.
+  Author:         Mohammad Makableh
+  
+==============================================================================-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raven Watches</title>
+    <link rel="stylesheet" th:href="@{/css/styles.css}"> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>   
+</head>
+<body class="home-page">
+    <header>
+        <div class="hamburger-menu" id="hamburger-menu">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <img th:src="@{/images/raven.png}" alt="Raven Logo" class="logo">
+        <nav id="nav-menu">
+            <a th:href="@{/}">Home</a>
+            <a th:href="@{/services}">Services</a>
+            <a th:href="@{/order}">Order</a>
+            <a th:href="@{/about}">About Us</a>
+            <a href="https://www.instagram.com/raven.watches/" target="_blank">Instagram Page</a>
+        </nav>
+    </header>
+    <main>
+        <div class="center-text">
+            <p class="small-text">keep your time rave with raven</p>
+            <p class="large-text">raven</p>
+            <p class="smallest-text">© 2024 Raven Watches</p>
+        </div>
+    </main>
+    <div class="background-video">
+        <video autoplay loop>
+            <source src="video.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <script th:src="@{/js/scripts.js}"></script>
+</body>
+</html>
